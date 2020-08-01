@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="db/migrations/V001__create_table_person.sql"/>
+    <include file="db/migrations/V002__insert_on_table_person.sql"/>
+    <include file="db/migrations/V003__create_table_book.sql"/>
+    <include file="db/migrations/V004__create_table_permission.sql"/>
+    <include file="db/migrations/V005__insert_data_in_permission.sql"/>
+    <include file="db/migrations/V006__create_table_users.sql"/>
+    <include file="db/migrations/V007__insert_data_in_users.sql"/>
+    <include file="db/migrations/V008__create_table_user_permission.sql"/>
+    <include file="db/migrations/V009__insert_data_in_user_permission.sql"/>
+
+</databaseChangeLog>
