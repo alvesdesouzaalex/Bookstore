@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   db: 
-    image: alvexalvesdesouza/mysql-bookstore-app
+    image: alexalvesdesouza/mysql-bookstore-app
     command: mysqld --default-authentication-plugin=mysql_native_password
     restart: always
     build: 
@@ -18,7 +18,7 @@ services:
     networks: 
       - bookstore-network
   bookstore-app:
-    image: alvexalvesdesouza/bookstore-app
+    image: alexalvesdesouza/bookstore-app
     restart: always
     build: ./bookstore-app
     working_dir: /bookstore-app 
