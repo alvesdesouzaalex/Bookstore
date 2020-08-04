@@ -9,3 +9,13 @@ mvn flyway:migration
 ##### Para Documentação dos endPoints usar SpringDocs com Swagger
 * https://springdoc.org/
 * https://www.baeldung.com/spring-rest-openapi-documentation
+
+
+#### Criar .ppk
+sudo apt-get install putty-tools
+sudo puttygen BOOKSTORE_KEY_PAIR.pem -o BOOKSTORE_KEY_PAIR.ppk -O private
+
+
+### Construindo novas imagens
+cd ../
+docker-compose up -d --build
