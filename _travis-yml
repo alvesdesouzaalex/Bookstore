@@ -1,0 +1,18 @@
+language: bash
+services: docker
+services: docker
+before_install:
+  - echo "------------->>>>> Basic Path <<<<<-------------"
+script:
+  - docker-compose build
+before-deploy: 
+  - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
+deploy: 
+  provider: script
+  script:
+    docker push alexalvesdesouza/mysql-bookstore-app;
+    docker push alexalvesdesouza/bookstore-app;
+  on:
+    branch: master
+notifications: 
+  email: false
