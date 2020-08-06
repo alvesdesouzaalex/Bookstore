@@ -21,7 +21,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.erudio"))
+                .apis(RequestHandlerSelectors.basePackage("br.com.bookstore"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
@@ -29,11 +29,11 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "RESTful Api With Spring boot 2.3",
+                "Bookstore Api With Spring boot 2.3 - Foo Bar",
                 "Full Api for any client",
                 "v1",
                 "",
-                new Contact("OpenLink IT", "www.openlinkit.com.br", "alvesdesouzaalex@gmail.com"),
+                new Contact("OpenLink Techinologies", "www.openlinkit.com.br", "alvesdesouzaalex@gmail.com"),
                 "Open Source MIT",
                 "",
                 Collections.emptyList()

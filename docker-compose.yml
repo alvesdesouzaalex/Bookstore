@@ -15,7 +15,7 @@ services:
     networks: 
       - bookstore-network
   bookstore-app:
-    image: alexalvesdesouza/bookstore-app
+    image: bookstore-app
     restart: always
     build: ./bookstore-app
     working_dir: /bookstore-app 
